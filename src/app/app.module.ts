@@ -11,6 +11,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PeopleProvider } from '../providers/people/people';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailContactPage } from '../pages/detail-contact/detail-contact';
+
 
 @NgModule({
   declarations: [
@@ -19,16 +23,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     SettingPage,
-    TabsPage
+    TabsPage,
+    DetailContactPage
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp, {
       'iconMode': 'ios',
       'tabsLayout': 'icon-top',
       platforms: {
         android: { 
-          'tabsLayout': 'icon-left',
+          // 'tabsLayout': 'icon-left',
           'tabsPlacement': 'top'
         }
       }
@@ -41,12 +47,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     SettingPage,
-    TabsPage
+    TabsPage,
+    DetailContactPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PeopleProvider
   ]
 })
 export class AppModule {}
