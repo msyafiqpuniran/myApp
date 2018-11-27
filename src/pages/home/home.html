@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list padding-bottom>
+  <ion-item>
+    <ion-label fixed>Username</ion-label>
+    <ion-input type="text" value="" placeholder="......." ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input type="password" value="" placeholder="......."></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button block (click)="showConfirm()">Login</button>
+
+<ion-grid>
+  <ion-row>
+    <ion-col class="signup">Sign Up</ion-col>
+    <ion-col class="contactus">Contact Us</ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+ <ion-row>
+   <ion-col>
+    <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" ></ion-input>
+    </ion-item>     
+   </ion-col>
+   <ion-col>
+     <ion-item >
+         <ion-label floating>Last Name</ion-label>
+         <ion-input type="text" ></ion-input>
+     </ion-item>
+   </ion-col>
+ </ion-row> 
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-12 col-sm-6>
+        <ion-item>
+            <ion-label >First Name</ion-label>
+            <ion-input type="text" ></ion-input>
+          </ion-item>
+    </ion-col>   
+    <ion-col col-12 col-sm-6>
+      <ion-item>
+        <ion-label >Last Name</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+    <ion-row>
+  <button ion-button block color="primary" (click)="showAlert()">Default/Primary</button>
+  <button ion-button block color="secondary">Secondary</button>
+  <button ion-button block color="danger">Danger</button>
+  <button ion-button block color="light">Light</button>
+  <button ion-button block color="dark">Dark</button>
+  <button ion-button block color="custom">Custom</button>
+</ion-row>
+</ion-grid>
+
+
+</ion-content>
